@@ -8,6 +8,7 @@ import About from './components/About/About'
 import Detail from './components/Detail/detail'
 import Form from './components/Form/Form'
 import { useLocation } from 'react-router-dom'
+import Favorites from './components/Favorites/Favorites'
 
 function App () {
   
@@ -75,6 +76,8 @@ const login = (userData) => {
           <Route path="/" element={<Form login={login}/>}></Route>
 
           <Route path="/home" element={<Cards characters={characters} onClose={onClose}/>}/>
+
+          <Route path="/favorites" element={<Favorites/>}/>
 
           <Route path="/about" element={<About/>}/>
 
