@@ -42,10 +42,14 @@ function App () {
     
     //! ******* ON SEARCH ******
     const onSearch = (id) => {
-        const URL_BASE = "https://be-a-rym.up.railway.app/api"
-        const KEY = "dac1f7ac8c54.6d7aadaf056f93592c47"
+        const URL_BASE = "http://localhost:3001/rickandmorty"
+        // const KEY = "dac1f7ac8c54.6d7aadaf056f93592c47"
         
-        fetch(`${URL_BASE}/character/${id}?key=${KEY}`)
+        if(characters.find((char) => char.id === id)){
+            return alert("Personaje repetido!");
+        }
+
+        fetch(`${URL_BASE}/onsearch/${id}`)
         .then((response) => response.json())
         .then((data) => {
             if (data.name) {
@@ -62,6 +66,7 @@ function App () {
     };
     
     
+    //! ******* ROUTING ******
     return(
         <div className='App' style={{ padding: "25px" }}>
             {pathname !== "/" &&<Nav onSearch={onSearch}/>}
