@@ -2,14 +2,20 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 import {connect} from "react-redux";
-import { addFavorite, removeFavorite } from "../../redux/actions";
+import { removeFavorite } from "../../redux/actions";
 import {useState, useEffect} from "react";
+import axios from "axios";
 
 
 
- function Card({id, name, species, gender, image, onClose,  addFavorite, removeFavorite, myFavorites}) {
+ function Card({id, name, species, gender, image, onClose, myFavorites}) {
 
     const [isFav, setIsFav] = useState(false);
+
+   const addFavorite = (character) => {
+      axios.post("http://localhost:3001/rickandmorty/fav", character)
+      .then(res=> console.log("ok"));
+   };
 
    const handleFavorite = () => {
       if(isFav){
@@ -17,7 +23,7 @@ import {useState, useEffect} from "react";
          removeFavorite(id);
       } else {
          setIsFav(true);
-         addFavorite({id, name, species, gender, image, onClose, addFavorite, removeFavorite});
+         addFavorite({id, name, species, gender, image});
       }
    }
 
@@ -59,9 +65,6 @@ import {useState, useEffect} from "react";
 
 const mapDispatchToProps = (dispatch) => {
     return{
-       addFavorite: (character)=>{
-          dispatch(addFavorite(character))
-       },
        removeFavorite: (id)=>{
           dispatch(removeFavorite(id))
        },
