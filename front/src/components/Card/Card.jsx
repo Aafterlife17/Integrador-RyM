@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { getFavorites, removeFavorite } from "../../redux/actions";
 import React from "react";
+import { MdFavorite } from "react-icons/md";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 function Card({ id, name, species, gender, image, onClose, myFavorites }) {
   const [isFav, setIsFav] = useState(false);
@@ -40,26 +42,31 @@ function Card({ id, name, species, gender, image, onClose, myFavorites }) {
   }, [myFavorites]);
 
   return (
-    <div className={style.container}>
-      {isFav ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleFavorite}>🤍</button>
-      )}
+    <div className={style.cards_container}>
+      <div className={style.card}>
+        {isFav ? (
+          <MdFavorite className={style.icon} onClick={handleFavorite} />
+        ) : (
+          <MdOutlineFavoriteBorder
+            className={style.icon}
+            onClick={handleFavorite}
+          />
+        )}
 
-      <button className={style.buttonOnClick} onClick={() => onClose(id)}>
-        x
-      </button>
+        <button className={style.buttonOnClick} onClick={() => onClose(id)}>
+          x
+        </button>
 
-      <Link to={`/detail/${id}`}>
-        <h2 className={style.nameH2}>Name: {name}</h2>
-      </Link>
-      <div className={style.divTextos}>
-        <h2 className={style.speciesH2}>Species: {species}</h2>
-        <h2 className={style.genderH2}>Gender: {gender}</h2>
+        <Link to={`/detail/${id}`}>
+          <h2 className={style.nameH2}>{name}</h2>
+        </Link>
+        <div className={style.divTextos}>
+          <h2 className={style.speciesH2}>Species: {species}</h2>
+          <h2 className={style.genderH2}>Gender: {gender}</h2>
+        </div>
+
+        <img src={image} alt="" />
       </div>
-
-      <img src={image} alt="" />
     </div>
   );
 }

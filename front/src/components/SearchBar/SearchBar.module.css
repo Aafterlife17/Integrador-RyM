@@ -1,5 +1,5 @@
 .navBar{
-    height: 50px;
+    height: 35px;
     display: flex;
     justify-content: end;
 }
@@ -9,15 +9,28 @@
     border-radius: 10px;
 }
 
+.buttonSearch{
+    display: flex;
+    gap: 20px;
+}
+
 .button{
-    color: white;
-    font-size: medium;
-    font-weight: 600;
-    background-color: black;
-    padding: 3px 15px;
-    margin-left: 10px;
-    border-radius: 10px;
-    border-color: white;
+    background: #17ACCA;
+        font-size: 14px;
+      
+        padding: 0px 20px 0px 20px;
+        border-radius: 15px;
+        border-color: #17ACCA;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        color: white;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: .2s;
 }
 
 .button:hover{
@@ -30,4 +43,13 @@
     background-color: green;
     color: white;
     border-color: green;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+    color: #023E48;
+    background: #E0FF64;
+    border-color: #E0FF64;
+    opacity: 1;
 }

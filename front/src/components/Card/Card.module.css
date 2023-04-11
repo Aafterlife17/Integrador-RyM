@@ -1,18 +1,27 @@
 
-.container{
+.cards_container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 5px;
+}
+
+.card{
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-color: black;
-    border-style: double;
+    border-color: #023E48;
+    border-style:hidden;
     box-shadow: 9px 10px 19px -1px rgba(0,0,0,0.5);;
     border-radius: 20px;
-    width: 25%;
+    width: 100%;
     margin-bottom: 50px;
     margin-left: 10px;
     margin-right: 10px;
     background-color: rgb(248, 248, 245);
+    
+    
 }
 
 .container img {
@@ -22,15 +31,22 @@
 }
 
 .buttonOnClick{
+    cursor: pointer;
     border-radius: 20px;
+    border: none;
     position:absolute; 
     top:0; 
     right:0;
     margin-right: 10px;
     color: white;
-    background-color: black;
+    background-color: #17ACCA;
     margin-top: 10px;
     padding: 5px 10px;
+}
+
+.buttonOnClick:hover{
+    color:#023E48;
+    background-color: #E0FF64;
 }
 
 .divTextos {
@@ -39,7 +55,7 @@
 }
 
 .nameH2{
-    margin-top: 30px;
+    margin-top: 10px;
    font-size: 1em;
    margin-bottom: auto;
 }
@@ -50,4 +66,12 @@
 
 .genderH2{
     font-size: 1em;
+}
+
+.icon{
+    cursor: pointer;
+    transition: .2s;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding-top: 15px;
 }

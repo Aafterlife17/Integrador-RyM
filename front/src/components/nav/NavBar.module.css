@@ -1,0 +1,55 @@
+*{
+    overflow: hidden;
+}
+
+
+.divNav {
+    z-index: 1000;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 0 40px 0 40px;
+}
+
+.divNav h4{
+    z-index: 1000;
+    color:white;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "RickandMorty";
+    src: url("./../../../public/get_schwifty.ttf");
+}
+
+.link h4{
+    font-family: "RickandMorty";
+    font-size: 1.5rem;
+    color: #17ACCA;
+}
+
+
+.link {
+    text-decoration: none;
+}
+
+
+.links h4:hover{
+    color: #E0FF64;
+}
+
+.links h4:current{
+    color: #E0FF64;
+}
+

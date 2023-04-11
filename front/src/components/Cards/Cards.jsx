@@ -13,20 +13,22 @@ function Cards({ characters, onClose }) {
   }, []);
 
   return (
-    <div className={style.cards}>
-      {characters.map(({ id, name, species, gender, image }) => {
-        return (
-          <Card
-            key={id}
-            id={id}
-            name={name}
-            species={species}
-            gender={gender}
-            image={image}
-            onClose={onClose}
-          />
-        );
-      })}
+    <div className={style.html_home}>
+      <div className={style.cards}>
+        {characters.map(({ id, name, species, gender, image }) => {
+          return (
+            <Card
+              key={id}
+              id={id}
+              name={name}
+              species={species}
+              gender={gender}
+              image={image}
+              onClose={onClose}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

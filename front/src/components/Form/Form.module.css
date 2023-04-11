@@ -1,0 +1,130 @@
+/* .html_app {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("./../../../public/imgs/background-app2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} */
+.login{
+    margin-top: 220px;
+    width: 280px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(37, 179, 12, 0.651);
+    border-radius: 15px;
+}
+
+
+
+.login_input{
+    border-color: whitesmoke;
+    border-radius: 15px;
+        background: whitesmoke;
+        padding: 15px;
+        padding-left: 40px;
+        font-size:0.9rem;
+        font-weight: 500;
+        width: 78%;
+        transition: .2s;
+    }
+    
+    .login_input:active,
+    .login_input:focus,
+    .login_input:hover {
+    outline: none;
+    border-color: #023E48;
+}
+
+.icon{
+    height: 1.9rem;
+    width: 1.9rem;
+    padding: 2px 6px 2px 6px;
+    position: absolute;
+    box-sizing: border-box;
+    color: #17ACCA;
+    top: 48%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+
+.icon2{
+    height: 1.6rem;
+        width: 1.6rem;
+        padding: 2px 6px 2px 6px;
+        position: absolute;
+        box-sizing: border-box;
+        color: #17ACCA;
+        top: 48%;
+        left: 6px;
+        transform: translateY(-50%);
+}
+
+/* .label{
+    position: absolute;
+    top: -1.5rem;
+    left: 0.5rem;
+    padding: 0 0.5rem;
+    font-weight: 500;
+    color:#023E48
+} */
+
+.error{
+    font-weight: 500;
+    color: rgb(203, 14, 14);
+}
+
+.input_icon{
+    position: relative;
+    width: 100%;
+}
+
+.input_div{
+    position: relative;
+    width:100%;
+    /* margin-bottom: 1rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_submit{
+    background: #17ACCA;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 16px 20px;
+    border-radius: 15px;
+    border-color: #17ACCA;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .2s;
+    
+}
+
+.login_submit:active,
+.login_submit:focus,
+.login_submit:hover {
+    color: #023E48;
+    background: #E0FF64;
+    border-color: #E0FF64;
+    opacity: 1;
+}

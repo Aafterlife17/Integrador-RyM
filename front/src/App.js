@@ -22,8 +22,8 @@ function App() {
   }, [access]);
 
   //! CREDENCIALES FAKE
-  const username = "nmalvicino@mail.com";
-  const password = "mipass123";
+  const username = "user@mail.com";
+  const password = "user123";
 
   //! ********* LOGIN ***********
   const login = (userData) => {
@@ -65,9 +65,10 @@ function App() {
 
   //! ******* ROUTING ******
   return (
-    <div className="App" style={{ padding: "25px" }}>
-      {pathname !== "/" && <Nav onSearch={onSearch} />}
-
+    <div className="App">
+      <div className="divNav">
+        {pathname !== "/" && <Nav onSearch={onSearch} />}
+      </div>
       <div>
         <Routes>
           <Route path="/" element={<Form login={login} />} />
